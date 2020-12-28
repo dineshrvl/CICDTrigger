@@ -10,4 +10,4 @@ pool: VMTESTNG
 
 steps:
 - checkout: self
-- script: "git checkout https://irepo.eur.ad.sag/scm/apigateway/prototypes.git"
+- script: "git clone https://irepo.eur.ad.sag/scm/apigateway/prototypes.git"
