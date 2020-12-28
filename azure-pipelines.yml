@@ -2,11 +2,6 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-resources:
-  repositories:
-  - repository: iRepo
-    type: bitbucket
-    endpoint: https://irepo.eur.ad.sag/scm/apigateway/prototypes.git
 
 trigger:
 - main
@@ -15,4 +10,4 @@ pool: VMTESTNG
 
 steps:
 - checkout: self
-- checkout: iRepo
+- script: "git checkout https://irepo.eur.ad.sag/scm/apigateway/prototypes.git"
