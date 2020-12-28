@@ -1,0 +1,16 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool: VMTESTNG
+
+steps:
+- script: "sudo rm -r ?*"
+  displayName: 'Cleanup'
+
+- script: "git checkout https://irepo.eur.ad.sag/scm/apigateway/prototypes.git"
+  displayName: 'Checkout'
