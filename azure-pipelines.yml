@@ -9,7 +9,7 @@ trigger:
 pool: VMTESTNG
 
 steps:
-- script: "sudo rm -r ?*"
+- script: "rd /s /q './*'"
   displayName: 'Cleanup'
 
 - script: "git checkout https://irepo.eur.ad.sag/scm/apigateway/prototypes.git"
